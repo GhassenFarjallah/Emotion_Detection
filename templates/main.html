@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmotionDetection</title>
+</head>
+<body>
+    <h1>Webcam Emotion Detection</h1>
+    <button id="detectButton">Detect Emotion</button>
+
+    <!-- Add JavaScript to handle the button click -->
+    <script>
+        document.getElementById("detectButton").addEventListener("click", function() {
+            // Send a POST request to trigger the GetEmotions view with CSRF token
+            fetch('result/', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}' // Include the CSRF token from the template
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Store the results in a variable (but don't display yet)
+                const result1 = "l'Emotion Dominante est : " + data.result1;
+                const result2 = "La deuxième Emotion Dominante est : " + data.result2;
+                const result3 = "La troisième Emotion Dominante est : " + data.result3;
+
+                // Add event listener to "Show Results" button
+                document.getElementById("showResults").addEventListener("click", function() {
+                    // Update the DOM with the results when "Show Results" is clicked
+                    document.getElementById("test1").innerHTML = result1;
+                    document.getElementById("test2").innerHTML = result2;
+                    document.getElementById("test3").innerHTML = result3;
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        });
+    </script>
+
+    <!-- Add the "Show Results" button -->
+    <button id="showResults">Show Results</button>
+    <h1 id="test1"></h1>
+    <h1 id="test2"></h1>
+    <h1 id="test3"></h1>
+</body>
+</html>
