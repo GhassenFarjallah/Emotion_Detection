@@ -1,0 +1,165 @@
+.home{
+  background-color: rgb(28, 255, 179);
+  color: black;
+  /* border: red; */
+  position: absolute;
+  cursor: pointer;
+}
+.choix{
+  background-color: rgb(28, 255, 179);
+  color: black;
+  /* right: 1480px; */
+  right: 10px;
+  /* border: red; */
+  position: absolute;
+  cursor: pointer;
+}
+.bg-img{
+    position: fixed ;
+       height: 100%;
+       width: 100%; 
+       /* object-fit: cover; */
+       z-index: -1; 
+      top: 0;
+      left: 0;
+      bottom: 0;
+   display: flex;
+   
+
+}
+
+  .item1{
+    position: fixed;
+    display: grid;
+    padding-left: 10%;
+    grid-template-columns: 1fr;
+    background-color:aquamarine;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    width: 320px;
+    top: 10px; 
+    right: 540px;
+    margin: 250px;
+    cursor: pointer;
+  }
+  .item2{
+    position: fixed;
+    display: grid;
+    padding-left: 10%;
+    grid-template-columns: 1fr  ;
+    background-color:aquamarine;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    width: 320px;
+    top: 10px; 
+    margin: 250px;
+    right: 180px;
+    cursor: pointer;
+  }
+  .item3{
+    position: fixed;
+    display: grid;
+    padding-left: 10%;
+    grid-template-columns: 1fr ;
+    background-color:aquamarine;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    width: 320px;
+    top: 140px; 
+    right: 540px;
+    margin: 250px;
+    cursor: pointer;
+  }
+  .item4{
+    position: fixed;
+    display: grid;
+    padding-left: 10%;
+    grid-template-columns: 1fr ;
+    background-color:aquamarine;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    width: 320px;
+    top: 140px;
+    margin: 250px;
+    right: 180px;
+    cursor: pointer;
+  }
+  .item5{
+    position: fixed;
+    display: grid;
+    padding-left: 10%;
+    grid-template-columns: 1fr ;
+    background-color:aquamarine;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    width: 320px;
+    top: 80px;
+    margin: 250px;
+    right: 370px;
+    cursor: pointer;
+  }
+  .item6{
+    position: fixed;
+    display: grid;
+    padding-left: 10%;
+    grid-template-columns: 1fr ;
+    background-color:aquamarine;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    width: auto;
+    top: 80px;
+    margin: 250px;
+    right: 235px;
+    /* cursor: pointer; */
+  }
+  .grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* .video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+ 
+
+.video {
+  position: fixed;
+  /* display: flex; */
+  /* max-width: 100%;
+  max-height: 100%; */
+  /* justify-content: center; */
+
+  width: 80%;
+  height: 700px;
+  top: 5%;
+  right: 150px; 
+
+  margin: 0 auto;
+  z-index: -1;
+  /* bottom:0; */
+  /* transform: scale(1); */
+}
+.but{
+  background-color: rgb(255, 0, 0);
+  color: aliceblue;
+  border: red;
+  position: absolute; /* Set the position to absolute */
+  top: 5%; /* Move the button 50 pixels from the top */
+  left: 1412px; /* Move the button 100 pixels from the left */
+  cursor: pointer;
+}
+.exit{
+  background-color: rgb(255, 0, 0);
+  color: aliceblue;
+  border: red;
+  position: absolute; /* Set the position to absolute */
+  top: 90%; /* Move the button 50 pixels from the top */
+  left: 1366px; /* Move the button 100 pixels from the left */
+  cursor: pointer;
+  width: 10%;
+}

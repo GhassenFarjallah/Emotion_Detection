@@ -1,0 +1,69 @@
+ <div>
+     <img [src]="myimage" class="bg-img">
+ </div>
+ <button #home routerLink="../" routerLinkActive="active"  class="home"  style="display: block">Home</button>
+ <button #choix   class="choix" (click)="afficherchoix()" style="display: none">Choix</button>
+ <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">home</mat-icon> -->
+ <!-- <span><mat-icon>eco</mat-icon>Todo List</span> -->
+
+  <div #button class="grid-container" style="display: block">
+      <div  (click)="afficherVideo()"  class="item1" (click)="playVideo()">
+          <div class="grid-item" >Happy</div>   
+       </div>
+       <div (click)="afficherVideo()" class="item2" (click)="playVideo_sad()">
+         <div class="grid-item">Sad</div>
+       </div>
+      <div (click)="afficherVideo()" (click)="playVideo()" class="item3">
+         <div class="grid-item">Angry</div>
+      </div>
+         
+      <div  (click)="afficherVideo()" (click)="playVideo()"  class="item4">
+         <div class="grid-item">Surprise</div>
+      </div>
+  </div>
+  <div #show (click)="resultat()" class="item5" style="display: none">
+    <div class="grid-item">Show Results</div>
+ </div>
+ <div>
+    <button #exit  (click)="quitter()" class="exit"  style="display: none">Exit</button>
+    <div #res  class="item6" style="display: none">
+        <div class="grid-item">la premiére émotion dominante est: resultat<br>La deuxiéme émotion dominante est: resultat<br>La troisiéme émotion dominante est: resultat</div>
+     </div>
+ </div>
+
+  
+  <div id="videoContainer">
+    <button #button_close class="but" (click)="stopVideo()" style="display: none;">X</button>
+    <video #hiddenVideo (ended)="end()" width="50%" height="50%"  controls style="display: none;" class="video" >
+        
+      <source [src]="myvideo" type="video/mp4">
+      <!-- Add other video sources for compatibility with different video formats -->
+    </video>
+  </div>
+  <div id="videoContainer">
+   <button #button_close class="but" (click)="stopVideo()" style="display: none;">X</button>
+   <video #hiddenVideo_sad (ended)="end()" width="50%" height="50%"  controls style="display: none;" class="video" >
+       
+     <source [src]="myvideo" type="video/mp4">
+     <!-- Add other video sources for compatibility with different video formats -->
+   </video>
+ </div>
+ <div id="videoContainer">
+   <button #button_close class="but" (click)="stopVideo()" style="display: none;">X</button>
+   <video #hiddenVideo_angry (ended)="end()" width="50%" height="50%"  controls style="display: none;" class="video" >
+       
+     <source [src]="myvideo" type="video/mp4">
+     <!-- Add other video sources for compatibility with different video formats -->
+   </video>
+ </div>
+ <div id="videoContainer">
+   <button #button_close class="but" (click)="stopVideo()" style="display: none;">X</button>
+   <video #hiddenVideo_surprise (ended)="end()" width="50%" height="50%"  controls style="display: none;" class="video" >
+       
+     <source [src]="myvideo" type="video/mp4">
+     <!-- Add other video sources for compatibility with different video formats -->
+   </video>
+ </div>
+  
+  <!-- <button (click)="afficherVideo()">Afficher la vidéo</button> -->
+<!-- <iframe src="" frameborder="0"></iframe> -->
